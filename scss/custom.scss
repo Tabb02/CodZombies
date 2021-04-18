@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d1d1d;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Starz-2016';
+  src:url('/docs/Starz-2016.ttf.woff') format('woff'),
+      url('/docs/Starz-2016.ttf.svg#Starz-2016') format('svg'),
+      url('/docs/Starz-2016.ttf.eot'),
+      url('/docs/Starz-2016.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.topNav{
+  display: none; //used for hamburger menu
+}
+
+.head {
+  height: 100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contain {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+body {
+  font-family: "gstatic";
+
+  nav ul {
+    background-color: rgb(15, 15, 15);
+    font-family: 'Starz-2016';
+    height: 100px;
+    margin: 0;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.25fr 1fr 1fr 1fr 0.15fr 1fr 2fr 1fr 0.25fr;
+}
+
+nav ul li {
+  height: 100px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 23px;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  height: 100px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color:#ffffff;
+}
+
+nav ul li a:hover {
+      color: #b1b1b1;
+}
+}
+
+.logo-image {
+  background: url(/img/logoImg.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.containfooter{
+  //max-height: 70px;
+  max-width: 1500px;
+  margin: auto;
+  height: none;
+}
+
+.containfooterNew{
+  max-height: 70px;
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  //grid-template-rows: repeat(1fr 1fr);
+  //grid-template-columns: repeat(5, 1fr);
+}
+
+.largecontain{
+  grid-template-columns: none;
+  grid-template-rows: none;
+  display:grid;
+  grid-template-rows: 2fr 2fr;
+  height: unset;
+  grid-gap: 25px; //CHANGE THIS FOR GRID GAP BETWEEN 2 ROWS
+
+}
+
+.smallcontain{
+  display:grid;
+  grid-template-columns: 0.10fr 1fr 1fr 1fr 1fr 1fr;
+  height: none;
+
+}
+
+.footer{
+  background-color: #0f0f0f;
+  display:grid;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  height: none;
+}
+
+.noheight{
+  font-size: unset;
+  font-size: 20px;
+  max-height: 70px;
+  padding-top: 23.5px; //DONT CHANGE THIS FOR TEXT HEIGHT
+}
+.noheightlarge{
+  max-height: 20px;
+  padding-top: 40px; //CHANGE THIS FOR IMAGE HIGHT
+
+}
+
+//footer stuff
+
+.activision-image {
+  background: url(/img/Activision_logo.png) no-repeat;
+  max-height: 60px;
+  background-position: center;
+  background-size: contain;
+}
+
+.Pegi-image {
+  background: url(/img/Pegi18.png) no-repeat;
+  max-height: 60px;
+  background-position: center;
+  background-size: contain;
+}
+
+.copyright{
+  color:#ffffff;
+  font-size: 12px;
+  font-family: "gstatic";
+  margin-left: 10px;
+}
+
+.template{
+  height: 740px;
+  color: #ffffff;
+}
+
+//============mobile stuff past here//============
+@media only screen and (max-width: 860px) {
+//================================ burger menu section ================================
+.logoImg{
+  float: left;
+  background: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.logoImg:hover{
+  transform: none;
+}
+
+.topNav {
+  background-color: rgb(15, 15, 15);
+  width:100%;
+  overflow: hidden;
+}
+  
+.BurgerBackground{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+  .nav-ul{
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+  } 
+    .nav-ul li a {
+      font-family: "Starz-2016";
+      display: inline-block;
+      color:#ffffff;
+      text-align: center;
+      padding: 0px 40px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-ul a:hover{
+      box-shadow: none;
+      color: #b1b1b1;
+      box-shadow: none;
+  }
+
+.hamburger{
+  background-color: transparent;
+  border: 0;
+  color:#ffffff;
+  cursor: pointer;
+  font-size: 30px;
+  display:none;
+}
+
+.hamburger:focus{
+  outline: none;
+}  
+
+.nav-ul{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color:rgb (15, 15, 15);
+  }    
+
+  .nav-ul.show{
+    display: flex;
+    height: auto; 
+  }
+
+  .topNav{
+    display: contents;
+  }
+
+  .nav-ul li a {
+    font-family: "Starz-2016";
+    margin-top:20px;
+    display: inline-block;
+    color:#ffffff;
+    text-align: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    font-size: 23px;
+  }
+
+.hamburger{ //displays the burger icon
+  display: block;
+}
+
+.BurgerBackground{ //used to add the backgrond colour onto the logo and burger icon
+  background-color: rgb(15, 15, 15);
+}
+//======================= end of burger menu section =======================
+
+.noheight{
+  font-size: 15px;
+}
+
+.copyright{
+  font-size: 10px;
+}
+
+.head{
+  display:none;
+}
+  
+} //the void is below
